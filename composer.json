@@ -1,0 +1,43 @@
+{
+    "name": "tecnolaw/store",
+    "description": "Basic Store of Tecnolaw",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marco Estrada Lopez",
+            "email": "info@devmarcoestrada.com",
+            "homepage": "https://devmarcoestrada.com",
+            "role": "Remote Software Developer"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php" : ">=5.6.4",
+        "laravel/lumen-framework": "~6.0|~7.0|~8.1",
+        "automattic/woocommerce": "~3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit" : "~5.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tecnolaw\\Shop\\": "src"
+        },
+        "files": [
+           "src/HelpersShop.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tecnolaw\\Shop\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tecnolaw\\Shop\\ShopServiceProvider"
+            ]
+        }
+    }
+}
